@@ -39,7 +39,7 @@
 
                 if ($parametersCount > 0) {
                     for ($index = 0; $index < $parametersCount; $index++) {
-                        $data['values'] = $data['values'] . ',?'
+                        $data['values'] = $data['values'] . ', ?';
                     }
                 }
                 
