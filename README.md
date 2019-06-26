@@ -1,5 +1,5 @@
 # PHPQuery
-Making your connection with MySQL using PHP more simple;
+Making your MySQL connection with PHP simpler;
 
 First, you need to edit the **database.json** file like this.
 
