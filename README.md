@@ -80,7 +80,7 @@ Example of a simple SELECT statement;
 
     $query = new PHPQuery();
     
-    $items = $query->insert($data);
+    $items = $query->update($data);
     
 ``` 
 
