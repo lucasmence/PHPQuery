@@ -45,3 +45,49 @@ Example of a simple SELECT statement;
     
     //equal to: select NAME, EMAIL from USERS where ID = $user->id
 ``` 
+
+**INSERT statement;**
+
+```php
+
+    include_once 'PHPQuery.php';
+    
+    $data = [
+            'table' => 'USERS',
+            'fields' => 'NAME, EMAIL, AGE',
+            'parameters' => ['Lucas', 'lucas@website.com', '22']
+            ];
+
+    $query = new PHPQuery();
+    
+    $items = $query->insert($data);
+    
+``` 
+
+**UPDATE statement;**
+
+```php
+
+    include_once 'PHPQuery.php';
+    
+    $data = [
+            'table' => 'USERS',
+            'fields' => ['NAME', 'AGE'],
+            'values' => ['Mence', '23']
+            'where' => 'NAME = ? and AGE = ?'
+            'parameters' => ['Lucas', '22'];
+            ];
+
+    $query = new PHPQuery();
+    
+    $items = $query->insert($data);
+    
+``` 
+
+**Important note:** Please don't forget to edit your **.htaccess** file to block the direct access of **database.json** file, adding these command lines:
+
+```html
+<Files "database.json">  
+  Require all denied
+</Files>
+``` 
