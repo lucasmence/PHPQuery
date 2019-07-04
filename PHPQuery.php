@@ -51,18 +51,8 @@
         }
 
         public function update($data) {
-
-            $parametersCount = substr_count($data['fields'],',')+1;
-
-            $dataFields = '';
-
-            if ($parametersCount > 0) {
-                for ($index = 0; $index < $parametersCount; $index++) {
-                    $dataFields = $dataFields . $data['fields'][$index] . ' = ' . $data['values'][$index];
-                }
-            }
             
-            $data['sql'] = 'update ' . $data['table'] . ' set ' . $dataFields . ' where ' . $data['where']; 
+            $data['sql'] = 'update ' . $data['table'] . ' set ' . $data['fields'] . ' where ' . $data['where']; 
             
             return self::execute($data);
         }
