@@ -21,6 +21,22 @@
             return $result; 
 
         }
+        
+        public function executeRow($data) {
+
+            include_once 'database.php';
+
+            $connection = Database::connect();
+
+            $sql = $data['sql'];
+
+            $query = $connection->query($sql);
+
+            Database::disconnect();
+
+            return $query; 
+
+        }
 
         public function select($data) {
 
