@@ -7,6 +7,8 @@
             include_once 'database.php';
 
             $connection = Database::connect();
+            
+            $connection->exec('SET CHARACTER SET utf8');
 
             $sql = $data['sql'];
 
